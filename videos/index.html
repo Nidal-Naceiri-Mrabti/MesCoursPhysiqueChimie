@@ -41,11 +41,20 @@
         border-radius: 8px;
         overflow: hidden;
         padding: 10px;
+        position: relative;
       }
-      .video-card video {
+      .video-card::after {
+        content: "";
+        display: block;
+        padding-top: 56.25%; /* Ratio 16:9 */
+      }
+      .video-card iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: auto;
-        border-radius: 5px;
+        height: 100%;
+        border: none;
       }
       .card-body {
         padding: 10px;
@@ -67,7 +76,7 @@
   </head>
   <body>
     <div id="marges">
-        <a id="top"> </a>
+      <a id="top"> </a>
       <!-- Bandeau supérieur -->
       <div id="bandeau">
         <img src="../atome.webp" width="120" height="120" alt="">
@@ -79,7 +88,7 @@
           <a href="../1bac/index.html" class="maths ">1bac</a>
           <a href="../2bac/index.html" class="maths">2bac</a>
           <a href="../simulation/index.html" class="maths">Simulations</a>
-          <a href="../simulation/index.html" class="maths ">Autres ressources</a>
+          <a href="../cours/index.html" class="maths ">Autres ressources</a>
           <a href="../videos/index.html" class="maths selected">Expériences</a>
         </div>
       </div>
@@ -91,28 +100,28 @@
         <h2>Physique</h2>
         <div class="video-list">
           <div class="video-card">
-            <iframe src="https://drive.google.com/file/d/1rIJ_PdQlGcYRuzbCKuGlYfxjOZVDGgE9/preview" width="640" height="360" allow="autoplay"></iframe>
+            <iframe src="https://drive.google.com/file/d/1rIJ_PdQlGcYRuzbCKuGlYfxjOZVDGgE9/preview" allow="autoplay"></iframe>
             <div class="card-body">
               <h3>Expérience 1 : Autoporteur et table à coussin d’air</h3>
               <p>Découvrez comment la réduction des frottements grâce à une table à coussin d’air illustre les lois fondamentales du mouvement.</p>
             </div>
           </div>
           <div class="video-card">
-            <iframe src="https://drive.google.com/file/d/1kelRFNYpvDmxhnC_Mh0-ZaoU3G9_C7V7/preview" width="640" height="360" allow="autoplay"></iframe>
+            <iframe src="https://drive.google.com/file/d/1kelRFNYpvDmxhnC_Mh0-ZaoU3G9_C7V7/preview" allow="autoplay"></iframe>
             <div class="card-body"> 
               <h3>Expérience 2 : Propagation d’une onde sur un câble</h3>
               <p>Observez la propagation des ondes sur un câble et comprenez les concepts de longueur d'onde et de fréquence.</p>
             </div>
           </div>
           <div class="video-card">
-            <iframe src="https://drive.google.com/file/d/1idSohYhg6Q0zK4tdSnuDKUoe5ID-Kb8_/preview" width="640" height="360" allow="autoplay"></iframe>
+            <iframe src="https://drive.google.com/file/d/1idSohYhg6Q0zK4tdSnuDKUoe5ID-Kb8_/preview" allow="autoplay"></iframe>
             <div class="card-body">
               <h3>Expérience 3 : Poussée d’Archimède</h3>
               <p>Explorez le principe de la poussée d’Archimède et son rôle dans la flottabilité des objets.</p>
             </div>
           </div>
           <div class="video-card">
-            <iframe src="https://drive.google.com/file/d/1psstMWBI2_bhiZAa4x9DCpNnssLQuMDT/preview" width="640" height="360" allow="autoplay"></iframe>
+            <iframe src="https://drive.google.com/file/d/1psstMWBI2_bhiZAa4x9DCpNnssLQuMDT/preview" allow="autoplay"></iframe>
             <div class="card-body">
               <h3>Expérience 4 : Le ballon dans une cloche à vide</h3>
               <p>Analysez les effets de la pression atmosphérique en observant le comportement d’un ballon dans une cloche à vide.</p>
@@ -126,28 +135,28 @@
         <h2>Chimie</h2>
         <div class="video-list">
           <div class="video-card">
-            <iframe src="https://drive.google.com/file/d/1nS4eazmokcQWbTKGiGn20xE5-vbB9qWj/preview" width="640" height="360" allow="autoplay"></iframe>
+            <iframe src="https://drive.google.com/file/d/1nS4eazmokcQWbTKGiGn20xE5-vbB9qWj/preview" allow="autoplay"></iframe>
             <div class="card-body">
               <h3>Expérience 1 : Extraction par solvant du diiode</h3>
               <p>Découvrez comment le diiode peut être isolé d’une solution à l’aide de solvants spécifiques.</p>
             </div>
           </div>
           <div class="video-card">
-            <iframe src="https://drive.google.com/file/d/1F5jwkWlohTLFZZtkkjMYknDsnk1E7nnu/preview" width="640" height="360" allow="autoplay"></iframe>
+            <iframe src="https://drive.google.com/file/d/1F5jwkWlohTLFZZtkkjMYknDsnk1E7nnu/preview" allow="autoplay"></iframe>
             <div class="card-body">
               <h3>Expérience 2 : Distillation aqueuse</h3>
               <p>Observez la méthode de séparation par distillation pour isoler des composés liquides.</p>
             </div>
           </div>
           <div class="video-card">
-            <iframe src="https://drive.google.com/file/d/1GrrY67FSV1Wb-2jN2PigoXDo746znNtF/preview" width="640" height="360" allow="autoplay"></iframe>
+            <iframe src="https://drive.google.com/file/d/1GrrY67FSV1Wb-2jN2PigoXDo746znNtF/preview" allow="autoplay"></iframe>
             <div class="card-body">
               <h3>Expérience 3 : Qu’est-ce qu’un ion ?</h3>
               <p>Une introduction au concept des ions et à leur rôle dans les réactions chimiques.</p>
             </div>
           </div>
           <div class="video-card">
-            <iframe src="https://drive.google.com/file/d/1UKU9p_VLEUubjNz9uU1ToHjZBHMudhZ1/preview" width="640" height="360" allow="autoplay"></iframe>
+            <iframe src="https://drive.google.com/file/d/1UKU9p_VLEUubjNz9uU1ToHjZBHMudhZ1/preview" allow="autoplay"></iframe>
             <div class="card-body">
               <h3>Expérience 4 : Détection des ions métalliques</h3>
               <p>Apprenez à identifier certains ions métalliques en solution grâce à des tests chimiques spécifiques.</p>
@@ -155,9 +164,6 @@
           </div>
         </div>
       </div>
-      
-      
-      
 
       <!-- Footer -->
       <div style="text-align: center; margin-top: 20px;">
